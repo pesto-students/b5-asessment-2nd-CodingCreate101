@@ -1,3 +1,28 @@
-const arrayCubeRootToJson = arr => {};
+const arrayCubeRootToJson = arr => {
+  const cubeRootObject = {};
+  const numbersArray = convertToNumberOrThrow(arr);
+  if (!Array.isArray(numbersArray)) {
+    throw new Error(numbersArray);
+  }
 
-export { arrayCubeRootToJson };
+  numbersArray.map(num => (cubeRootObject[num] = Math.cbrt(num)));
+
+  return cubeRootObject;
+};
+
+function convertToNumberOrThrow(arr) {
+  if (!Array.isArray(arr)) {
+    return "Invalid array";
+  }
+  const numArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (isNaN(arr[i]) || arr[i] === null) {
+      return "Invalid array";
+    }
+    numArray.push(Number(arr[i]));
+  }
+
+  return numArray;
+}
+
+module.exports = { arrayCubeRootToJson };

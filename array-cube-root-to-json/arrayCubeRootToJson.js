@@ -1,6 +1,6 @@
 const arrayCubeRootToJson = arr => {
   const cubeRootObject = {};
-  const numbersArray = convertToNumberOrThrow(arr);
+  const numbersArray = convertToNumberOrReturnErrorMessage(arr);
   if (!Array.isArray(numbersArray)) {
     throw new Error(numbersArray);
   }
@@ -10,7 +10,7 @@ const arrayCubeRootToJson = arr => {
   return cubeRootObject;
 };
 
-function convertToNumberOrThrow(arr) {
+function convertToNumberOrReturnErrorMessage(arr) {
   if (!Array.isArray(arr)) {
     return "Invalid array";
   }

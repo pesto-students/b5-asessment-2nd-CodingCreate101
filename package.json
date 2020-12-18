@@ -1,0 +1,19 @@
+{
+  "name": "b5-assessment-2nd-codingcreate101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/b5-assessment-2nd-CodingCreate101.git"
+  },
+  "author": "Tejas H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/b5-assessment-2nd-CodingCreate101/issues"
+  },
+  "homepage": "https://github.com/pesto-students/b5-assessment-2nd-CodingCreate101#readme"
+}
